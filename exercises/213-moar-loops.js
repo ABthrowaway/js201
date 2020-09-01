@@ -1,12 +1,13 @@
+/*jshint esversion: 6 */
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Complete the removeZAnimals function as described below:
 
-function removeZAnimals () {
+function removeZAnimals() {
   // 1) declare an array with some strings
-  const animals = ["alligator", "zebra", "crocodile", "giraffe"]
+  const animals = ["alligator", "zebra", "crocodile", "giraffe"];
 
   // create an empty array (we will fill this with strings from the previous array)
-  let animalsWithoutZ = []
+  return (animalsWithoutZ = animals.filter((word) => word.indexOf("z") == -1));
 
   // 2) loop through "animals"
 
@@ -15,15 +16,25 @@ function removeZAnimals () {
   //    HINT: remember you can search within a string
 
   // 4) return "animalsWithoutZ"
-
 }
+
+console.log(removeZAnimals());
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "removeAnyWordWithZ" that takes 1 argument: an array of strings
 // It should return a new array that has all of the items in the passed-in array minus
 // any words that contain the letter 'z' or 'Z' (case-insensitive)
 
+var removeAnyWordWithZ = (strArray) => {
+  var newArray = strArray.filter(
+    (word) => word.indexOf("z") == -1 && word.indexOf("Z") == -1
+  );
+  return newArray;
+};
 
+console.log(
+  removeAnyWordWithZ(["alligator", "zebra", "crocodile", "giraffe", "Zippo"])
+);
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "removeWordsWithChar" that takes 2 arguments:

@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 // Write a function "fizzbuzz" that returns the fizzbuzz string for an input number.
 // A fizzbuzz string is defined as the following:
 // For every number from 1 to the input number
@@ -9,3 +10,21 @@
 // Examples:
 // fizzbuzz(3) --> '..fizz'
 // fizzbuzz(15) --> '..fizz.buzzfizz..fizzbuzz.fizz..fizzbuzz'
+
+var fizzbuzz = (num) => {
+  var result = "";
+  for (let i = 1; i <= num; i++) {
+    if (i % 3 == 0 && i % 5 != 0) {
+      result += "fizz";
+    } else if (i % 3 != 0 && i % 5 == 0) {
+      result += "buzz";
+    } else if (i % 15 == 0) {
+      result += "fizzbuzz";
+    } else {
+      result += ".";
+    }
+  }
+  return result;
+};
+
+console.log(fizzbuzz(15));

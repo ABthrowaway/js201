@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 // Write a function "hello" that takes one argument (a name), and returns a
 // string that says hello to the name.
 // Examples:
@@ -5,8 +6,15 @@
 // - hello('banana') should return 'Hello, banana!'
 // - hello('DETROIT') should return 'Hello, DETROIT!'
 
+var hello = (name) => `Hello, ${name}!`;
+
+console.log(hello("Andrew"));
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "helloDefault" such that if no name is given it will return
 // 'Hello, world!'
 // Otherwise it behaves the same as the "hello" function.
+
+var hello = (name = "world!") => `Hello, ${name}!`;
+
+console.log(hello());
